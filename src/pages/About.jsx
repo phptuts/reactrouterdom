@@ -1,9 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 
 export const aboutLoader = async () => {
-  const response = await fetch("https://dog.ceo/api/breeds/image/random");
+  const response = await fetch("https://dog.ceo/api/breeds/image/rando");
   if (response.status != 200) {
-    throw new Response("Error", { status: 500 });
+    throw new Response("Dog not found", {
+      status: 500,
+      statusText: "DogError",
+      message: "Dog Not Found",
+    });
   }
   const json = await response.json();
   return { imageUrl: json.message };
