@@ -7,6 +7,7 @@ import Home from "./pages/Home.jsx";
 import About, { aboutLoader } from "./pages/About.jsx";
 import Contact, { contactLoader } from "./pages/Contact.jsx";
 import ErrorPage from "./ErrorPage.jsx";
+import Person from "./pages/Person.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
         loader: contactLoader,
+      },
+      {
+        path: "/person/:id",
+        element: <Person />,
       },
     ],
   },
