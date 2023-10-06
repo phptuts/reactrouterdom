@@ -34,6 +34,10 @@ const router = createBrowserRouter([
         element: <Person />,
         loader: personLoader,
       },
+      {
+        path: "/person",
+        element: <Home />,
+      },
     ],
   },
 ]);

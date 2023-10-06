@@ -1,7 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 
 export const aboutLoader = async () => {
-  const response = await fetch("https://dog.ceo/api/breeds/image/rando");
+  const response = await fetch("https://dog.ceo/api/breeds/image/random");
   if (response.status != 200) {
     throw new Response("Dog not found", {
       status: 500,
