@@ -7,7 +7,7 @@ import Home from "./pages/Home.jsx";
 import About, { aboutLoader } from "./pages/About.jsx";
 import Contact, { contactLoader } from "./pages/Contact.jsx";
 import ErrorPage from "./ErrorPage.jsx";
-import Person from "./pages/Person.jsx";
+import Person, { personLoader } from "./pages/Person.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +32,7 @@ const router = createBrowserRouter([
       {
         path: "/person/:id",
         element: <Person />,
+        loader: personLoader,
       },
     ],
   },
