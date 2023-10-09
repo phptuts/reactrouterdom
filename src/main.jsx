@@ -5,7 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import About, { aboutLoader } from "./pages/About.jsx";
-import Contact, { contactLoader } from "./pages/Contact.jsx";
+import Contact, { contactAction, contactLoader } from "./pages/Contact.jsx";
 import ErrorPage from "./ErrorPage.jsx";
 import Person, { personLoader } from "./pages/Person.jsx";
 
@@ -28,6 +28,7 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
         loader: contactLoader,
+        action: contactAction,
       },
       {
         path: "/person/:id",
